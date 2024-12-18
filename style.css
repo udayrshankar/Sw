@@ -39,6 +39,7 @@
   align-self: flex-start;
   margin-top: 150px;
   margin-left: 90px;
+  animation: slideup3 2s;
 }
 
 .circle-bottom {
@@ -66,15 +67,16 @@
   flex-direction: column;
   color: #000000;
   margin: 49px auto 0;
-  padding: 44px 45px 119px;
+  padding: 100px 45px 119px;
   font: var(--sds-typography-body-font-weight-regular) var(--sds-typography-body-size-medium) / 1.4 var(--sds-typography-body-font-family);
   border: 1px solid #ffffff;
+  animation: slideup2 2s;
 }
 
 .form-group {
   font-family: Verdana, Geneva, Tahoma, sans-serif ;
   display: flex;
-  width: 100%;
+  width: 95%;
   flex-direction: column;
   justify-content: flex-start;
 }
@@ -86,13 +88,20 @@
   min-height: 40px;
   min-width: 240px;
   margin-top: 8px;
-  width: 100%;
+  width: 90%;
   padding: 12px;
   border: 1px solid #807f7f;
+  animation: slideup 2s;
 }
 
 .form-group + .form-group {
   margin-top: 46px;
+  
+}
+
+html,
+body {
+  scroll-behavior: smooth;
 }
 
 .submit-button {
@@ -106,6 +115,7 @@
   border: 1px solid #bababa;
   color: var(--sds-color-text-brand-on-brand);
   cursor: pointer;
+  transition: 60ms;
 }
 
 .visually-hidden {
@@ -121,16 +131,59 @@
 
 .submit-button:hover{
     background-color: blueviolet;
+    scale: 1.1;
 }
 
 .form-input:hover{
-    background-color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0.214);
 }
 
+@keyframes slideup {
+
+  0%{
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  80%{
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  100%{
+    opacity: 100%;
+    scale: 1;
+  }
+}
+
+@keyframes slideup2 {
+
+  0%{
+    opacity: 0;
+  }
+
+  80%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+}
+
+@keyframes slideup3 {
+
+  0%{
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 100%;
+  }
+}
 
 @media (max-width: 991px) {
   .contact-section {
-    padding: 0 20px;
+    padding: 0 0px;
   }
   
   .contact-container {
