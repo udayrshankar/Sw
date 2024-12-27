@@ -533,10 +533,10 @@ nav {
     align-items: center;
     text-align: left;
   }
-
+/*
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
-  }
+  }*/
 }
 
 @media (width > 1024px) {
